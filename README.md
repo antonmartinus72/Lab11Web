@@ -13,6 +13,7 @@ Praktikum dilakukan dengan modul praktikum yang sudah disediakan.
 - XAMPP 3.2.4
 - Codeigniter 4
 - Visual Studio Code (text editor)
+<hr>
 
 ### Pengaturan XAMPP
 
@@ -21,6 +22,8 @@ Pertama masuk ke pengaturan file config apache pada xampp yang terletak pada con
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/1.jpg)
 
 Kemudian hilangkan titik koma "`;`" pada baris yang di blok seperti di atas. Lalu simpan file dan aktifkan module apache pada control panel dengan menekan tombol "start".
+
+<hr>
 
 ### Instalasi Codeigniter 4
 
@@ -53,6 +56,8 @@ Untuk mengetahui route yang di tambahkan apakah sudah benar, silahkan buka comma
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/7.jpg)
 
+<hr>
+
 ### Menambahkan Controller Baru
 
 Pertama buat file dengan nama "**page.php**" pada direktori "**app/Controllers**". Setelah itu buka file tadi ("**page.php**") dan isi seperti di bawah ini :
@@ -65,6 +70,8 @@ Coba akses "localhost:8080/**DirektoriCodeIgniterAnda**/public/about" dan akan t
 
 \*Alamat harus di sesuaikan dengan tempat anda menyimpan folder codeigniter.
 
+<hr>
+
 ### Auto Routing
 
 Ubah baris `$routes->setAutoRoute(false);` menjadi `$routes->setAutoRoute(true);` pada file Routes.php dan tambahkan method berikut pada "controller/page" :
@@ -76,6 +83,8 @@ Ubah baris `$routes->setAutoRoute(false);` menjadi `$routes->setAutoRoute(true);
 Lalu akses "localhost:8080/**DirektoriCodeIgniterAnda**/public/page/tos"
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/10.jpg)
+
+<hr>
 
 ### Membuat View
 
@@ -126,6 +135,8 @@ Hasilnya akan terlihat seprti ini :
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/15.jpg)
 
+<hr>
+
 ### Menambahkan Controller Baru
 
 Mengubah method `Home` pada controller **home.php** untuk membuat halaman indeks mengarah pada view **home.php**.
@@ -136,11 +147,15 @@ Menambahkan 2 method baru pada controller **page.php**.
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/16_b.jpg)
 
-### Struktut View
+<hr>
+
+### Struktur View
 
 Struktur View.
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/17.jpg)
+
+<hr>
 
 ### Output
 
