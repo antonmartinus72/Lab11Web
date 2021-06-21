@@ -11,13 +11,6 @@ class Page extends BaseController
             'content' => 'Ini adalah halaman abaut yang menjelaskan tentang is halaman ini.'
         ]);
     }
-
-    public function artikel()
-    {
-        return view('artikel', [
-            'title' => 'Artikel',
-        ]);
-    }
     public function kontak()
     {
         return view('kontak', [

@@ -1,15 +1,19 @@
 # PRAKTIKUM PEMROGRAMAN WEB
 
-## Praktikum Pertemuan 12
+## Praktikum Pertemuan 12 & 13
 
 Praktikum dilakukan dengan modul praktikum yang sudah disediakan.
 
 - File praktikum terdapat pada folder **lab11_ci**.
+- Terdapat 2 praktikum dalam repositori ini (**Praktikum 11 & Praktikum 12**).
+- Praktikum 11 dimulai dari [sini](#praktikum_11).
+- Praktikum 12 dimulai dari [sini](#praktikum_12).
+
+<h1 id="praktikum_11">PRAKTIKUM 11</h1>
 
 ## 1. INSTALASI
 
 **Software yang digunakan :**
-
 - XAMPP 3.2.4
 - Codeigniter 4
 - Visual Studio Code (text editor)
@@ -35,7 +39,7 @@ Setelah selesai di unduh, ekstrak semua file di dalam file codeigniter ke dalam 
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/3.jpg)
 
-Masuk ke alamat localhost pada browser lalu arahkan ke direktori public yang terdapat pada direktori codeigniter yang tadi sudah di ekstrak. Anda akan melihat tampilan seperti ini :
+Masuk ke alamat  localhost pada browser lalu arahkan ke direktori public yang terdapat pada direktori codeigniter yang tadi sudah di ekstrak. Anda akan melihat tampilan seperti ini :
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/4.jpg)
 
@@ -68,7 +72,7 @@ Coba akses "localhost:8080/**DirektoriCodeIgniterAnda**/public/about" dan akan t
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/9.jpg)
 
-\*Alamat harus di sesuaikan dengan tempat anda menyimpan folder codeigniter.
+*Alamat harus di sesuaikan dengan tempat anda menyimpan folder codeigniter.
 
 <hr>
 
@@ -76,9 +80,9 @@ Coba akses "localhost:8080/**DirektoriCodeIgniterAnda**/public/about" dan akan t
 
 Ubah baris `$routes->setAutoRoute(false);` menjadi `$routes->setAutoRoute(true);` pada file Routes.php dan tambahkan method berikut pada "controller/page" :
 
-    public function tos() {
-        echo "ini halaman Term of Services";
-    }
+    public function tos() { 
+	    echo "ini halaman Term of Services"; 
+	}
 
 Lalu akses "localhost:8080/**DirektoriCodeIgniterAnda**/public/page/tos"
 
@@ -104,13 +108,13 @@ Masuk ke halaman "localhost:8080/**DirektoriCodeIgniterAnda**/public/about" lalu
 
 Membuat layout halaman blog dengan menggunakan css pada codeigniter 4. File css akan di simpan pada folder publik di direktori code igniter dengan nama **style.css**.
 
-** \*File css yang digunakan diambil dari praktikum 4.**
+** *File css yang digunakan diambil dari praktikum 4.**
 
 Baut folder baru dengan nama "**template**" pada direktori **view**.
 Lalu buat file "**header.php**" dan "**footer.php**".
 
 Isi file **header.php** seperti berikut :
-
+ 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/12_vHeader.jpg)
 
 Isi file **footer.php** seperti berikut :
@@ -125,11 +129,12 @@ Hasilnya akan terlihat seprti ini :
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/13_Output.jpg)
 
+
 # 4. TUGAS
 
-**_"Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga semua link pada navigasi header dapat menampilkan tampilan dengan layout yang sama"_**
+***"Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga semua link pada navigasi header dapat menampilkan tampilan dengan layout yang sama"***
 
-\*File view diambil dari repositori tugas praktikum 4 pada [halaman ini](https://github.com/antonmartinus72/Lab4Web).
+*File view diambil dari repositori tugas praktikum 4 pada [halaman ini](https://github.com/antonmartinus72/Lab4Web).
 
 ### Menambahkan Route Baru
 
@@ -151,7 +156,7 @@ Menambahkan 2 method baru pada controller **page.php**.
 
 ### Struktur View
 
-Struktur View.
+Struktur View. 
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/17.jpg)
 
@@ -174,5 +179,9 @@ Halaman **About**.
 Halaman **Kontak**.
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshoot/14_d.jpg)
+
+<hr>
+
+<h1 id="praktikum_12">PRAKTIKUM 12</h1>
 
 ## Sekian & Terimakasih
