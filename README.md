@@ -1,13 +1,14 @@
 # PRAKTIKUM PEMROGRAMAN WEB
 
-## Praktikum Pertemuan 12 & 13
+## Praktikum Pertemuan 12, 13 & 14
 
 Praktikum dilakukan dengan modul praktikum yang sudah disediakan.
 
 - File praktikum terdapat pada folder **lab11_ci**.
-- Terdapat 2 praktikum dalam repositori ini (**Praktikum 11 & Praktikum 12**).
+- Terdapat 3 praktikum dalam repositori ini (**Praktikum 11, 12 & 13**).
 - Praktikum 11 dimulai dari [sini](#praktikum_11).
 - Praktikum 12 dimulai dari [sini](#praktikum_12).
+- Praktikum 13 dimulai dari [sini](#praktikum_13).
 
 <h1 id="praktikum_11">PRAKTIKUM 11</h1>
 
@@ -311,5 +312,96 @@ Masukan method berikut ke dalam controller "**artikel.php**" :
 ## 7. Tugas
 
 Praktikum sudah ditambahkan framework css bootstrap untuk mempermudah kostumisasi tampilan.
+
+<hr>
+
+<h1 id="praktikum_13">PRAKTIKUM 13</h1>
+
+Praktikum ini akan membahas penggunaan auth dan filter yang akan diterapkan pada sistem login.
+
+## 1. Membuat Tabel Baru pada Database
+
+Masukan kode SQL berikut untuk membuat tabel baru.
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/1.png)
+
+## 2. Membuat Model & Controller
+
+Buat file model baru dengan nama "UserModel.php" dan isi dengan kode berikut :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/2.png)
+
+Kemudian buat file controller baru dengan nama "User.php" dan isi dengan kode berikut :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/3.png)
+
+## 3. Membuat View
+
+Buat folder dengan nama "user"pada folder view kemudian buat file baru didalamnya dengan nama "login.php".
+
+Selanjutnya masukan kode berikut pada "login.php" :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/4.png)
+
+## 4. Membuat Data Dummy
+
+Membuat database dengan database seeder untuk uji coba sistem login.
+
+Buka CLI yang diarahkan ke direktori root codeigniter lalu masukan perintah berikut :
+
+    php spark make:seeder UserSeeder
+
+Lalu akan terlihat seperti dibawah ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/5.jpg)
+
+Selanjutnya akan terdapat file dengan nama "UserSeeder.php" pada App\Database\Seeds. Ganti kode didalamnya dengan kode berikut :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/6.png)
+
+Kembali ke CLI dan masukan perintah berikut : 
+
+    php spark db:seed UserSeeder
+
+Lalu akan terlihat seperti di bawah ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/7.jpg)
+
+Masuk ke alamat /user/login pada browser. Dan akan terlihat tampilan login seperti berikut :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/8.jpg)
+
+## 5. Auth & Filter
+
+Selanjutnya membuat autentikasi dan filter untuk mengkonfirmasi status login & mengarahkan user pada halaman yang membutuhkan login.
+
+Buat file filter baru dengan nama "Auth.php" dan masukan kode di bawah ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/9.png)
+
+Selanjutnya buka file "Filters.php" pada **app/config** dan tambahkan kode berikut ke dalam variabel `$aliases` :
+
+    'auth' => App\Filters\Auth::class
+
+Kode akan terlihat seperti ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/10.png)
+
+## 6. Routes
+
+Buka file "Routes.php".
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/11.png)
+
+Sesuaikan baris pertama kode di atas menjadi seperti kode baris pertama dibawah ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/11a.png)
+
+## 7. Logout
+
+Selanjutnya tambahkan method `logout()` pada controller "User" yang berfungsi untuk menghapus session yang sedang berjalan saat user login.
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/12.png)
+
 
 ## Sekian & Terimakasih
