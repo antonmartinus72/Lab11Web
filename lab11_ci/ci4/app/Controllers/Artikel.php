@@ -13,6 +13,7 @@ class Artikel extends BaseController
         $artikel = $model->findAll();
         return view('artikel/index', compact('artikel', 'title'));
     }
+
     public function view($slug)
     {
         $model = new ArtikelModel();
