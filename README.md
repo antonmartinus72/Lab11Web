@@ -1,14 +1,15 @@
 # PRAKTIKUM PEMROGRAMAN WEB
 
-## Praktikum Pertemuan 12, 13 & 14
+## Praktikum Pertemuan 12, 13, 14, & 15
 
 Praktikum dilakukan dengan modul praktikum yang sudah disediakan.
 
 - File praktikum terdapat pada folder **lab11_ci**.
-- Terdapat 3 praktikum dalam repositori ini (**Praktikum 11, 12 & 13**).
+- Terdapat 4 praktikum dalam repositori ini (**Praktikum 11, 12, 13 & 14**).
 - Praktikum 11 dimulai dari [sini](#praktikum_11).
 - Praktikum 12 dimulai dari [sini](#praktikum_12).
 - Praktikum 13 dimulai dari [sini](#praktikum_13).
+- Praktikum 14 dimulai dari [sini](#praktikum_14).
 
 <h1 id="praktikum_11">PRAKTIKUM 11</h1>
 
@@ -402,5 +403,81 @@ Sesuaikan baris pertama kode di atas menjadi seperti kode baris pertama dibawah 
 Selanjutnya tambahkan method `logout()` pada controller "User" yang berfungsi untuk menghapus session yang sedang berjalan saat user login.
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/12.png)
+
+<hr>
+
+<h1 id="praktikum_14">PRAKTIKUM 14</h1>
+
+Praktikum ini akan membahas penambahan fitur pagination, search dan upload gambar.
+
+## 1. Pagination
+
+Ubah method "**admin_index**"controller "**Artikel**" dengan kode dibawah ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/1.png)
+
+Pada kode di atas, saya menggunkan paginate(2) untuk membatasi 2 data dalam satu page.
+
+Selanjutnya masukan kode berikut ke dalam views "/artikel/admin_index.php" :
+
+    <?= $pager->links(); ?>
+
+Saya menempatkan kode diatas di bawah tag `</table>` :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/2.png)
+
+### Output
+
+Hasilnya akan terlihat seperti ini, pagination berada dibawah tabel.
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/2a.png)
+
+## 2. Search
+
+Membuat fitur search untuk mencari data dalam tabel.
+
+Ubah method "**admin_index**"controller "**Artikel**" dengan kode dibawah ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/3.png)
+
+Tambahkan kode berikut ke dalam views "**/artikel/admin_index.php**".
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/4.png)
+
+Saya menempatkan kode diatas di bawah tag sebelum form :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/4a.png)
+
+### Output
+
+Hasilnya akan terlihat seperti ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/5.png)
+
+## 3. Upload Gambar
+
+Sesuaikan method "add" pada controller "**Artikel**" dengan kode berikut :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/6.png)
+
+Tambahkan kode berikut ke dalam view "**artikel/form_add.php**".
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/7.png)
+
+Selanjutnya tambahkan atribut html dibawah ini kedalam tag `<form>` :
+
+    enctype="multipart/form-data"
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/8.png)
+
+Selanjutnya adalah menambahkan artikel baru dengan gambar.
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/9.png)
+
+### Output
+
+Hasilnya akan terlihat pada halaman "/artikel" seperti di bawah ini :
+
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot-Pr14/10.png)
 
 ## Sekian & Terimakasih
