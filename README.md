@@ -15,6 +15,7 @@ Praktikum dilakukan dengan modul praktikum yang sudah disediakan.
 ## 1. INSTALASI
 
 **Software yang digunakan :**
+
 - XAMPP 3.2.4
 - Codeigniter 4
 - Visual Studio Code (text editor)
@@ -40,7 +41,7 @@ Setelah selesai di unduh, ekstrak semua file di dalam file codeigniter ke dalam 
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr11/3.jpg)
 
-Masuk ke alamat  localhost pada browser lalu arahkan ke direktori public yang terdapat pada direktori codeigniter yang tadi sudah di ekstrak. Anda akan melihat tampilan seperti ini :
+Masuk ke alamat localhost pada browser lalu arahkan ke direktori public yang terdapat pada direktori codeigniter yang tadi sudah di ekstrak. Anda akan melihat tampilan seperti ini :
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr11/4.jpg)
 
@@ -73,7 +74,7 @@ Coba akses "localhost:8080/**DirektoriCodeIgniterAnda**/public/about" dan akan t
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr11/9.jpg)
 
-*Alamat harus di sesuaikan dengan tempat anda menyimpan folder codeigniter.
+\*Alamat harus di sesuaikan dengan tempat anda menyimpan folder codeigniter.
 
 <hr>
 
@@ -81,9 +82,9 @@ Coba akses "localhost:8080/**DirektoriCodeIgniterAnda**/public/about" dan akan t
 
 Ubah baris `$routes->setAutoRoute(false);` menjadi `$routes->setAutoRoute(true);` pada file Routes.php dan tambahkan method berikut pada "controller/page" :
 
-    public function tos() { 
-	    echo "ini halaman Term of Services"; 
-	}
+    public function tos() {
+        echo "ini halaman Term of Services";
+    }
 
 Lalu akses "localhost:8080/**DirektoriCodeIgniterAnda**/public/page/tos"
 
@@ -109,13 +110,13 @@ Masuk ke halaman "localhost:8080/**DirektoriCodeIgniterAnda**/public/about" lalu
 
 Membuat layout halaman blog dengan menggunakan css pada codeigniter 4. File css akan di simpan pada folder publik di direktori code igniter dengan nama **style.css**.
 
-** *File css yang digunakan diambil dari praktikum 4.**
+** \*File css yang digunakan diambil dari praktikum 4.**
 
 Baut folder baru dengan nama "**template**" pada direktori **view**.
 Lalu buat file "**header.php**" dan "**footer.php**".
 
 Isi file **header.php** seperti berikut :
- 
+
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr11/12_vHeader.jpg)
 
 Isi file **footer.php** seperti berikut :
@@ -130,12 +131,11 @@ Hasilnya akan terlihat seprti ini :
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr11/13_Output.jpg)
 
-
 # 4. TUGAS
 
-***"Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga semua link pada navigasi header dapat menampilkan tampilan dengan layout yang sama"***
+**_"Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga semua link pada navigasi header dapat menampilkan tampilan dengan layout yang sama"_**
 
-*File view diambil dari repositori tugas praktikum 4 pada [halaman ini](https://github.com/antonmartinus72/Lab4Web).
+\*File view diambil dari repositori tugas praktikum 4 pada [halaman ini](https://github.com/antonmartinus72/Lab4Web).
 
 ### Menambahkan Route Baru
 
@@ -157,7 +157,7 @@ Menambahkan 2 method baru pada controller **page.php**.
 
 ### Struktur View
 
-Struktur View. 
+Struktur View.
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr11/17.jpg)
 
@@ -195,9 +195,9 @@ Membuat database dengan kode berikut untuk menyimpan artikel yang nanti dapat di
 
 ### Mengatur login database pada Codeigniter
 
-Untuk membuat codeigniter dapat mengakses database, kita harus login terlebih dahulu ke dalam database. Pengaturan login database dapat dilihat pada file **.env**  pada direktori codeigniter.
+Untuk membuat codeigniter dapat mengakses database, kita harus login terlebih dahulu ke dalam database. Pengaturan login database dapat dilihat pada file **.env** pada direktori codeigniter.
 
-![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr12/2.jpg)	
+![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr12/2.jpg)
 
 Pengaturan di atas harus disesuaikan dengan server yang dipakai, dalam kasus ini saya memakasi XAMPP. Untuk `database.default.database` harus disesuaikan dengan nama database yang digunakan.
 
@@ -281,7 +281,7 @@ Kemudian buat file view baru dengan nama "**form_add**" pada direktori "Views/ar
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr12/6a.png)
 
-### Output 
+### Output
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr12/6b.jpg)
 
@@ -359,7 +359,7 @@ Selanjutnya akan terdapat file dengan nama "UserSeeder.php" pada App\Database\Se
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/6.png)
 
-Kembali ke CLI dan masukan perintah berikut : 
+Kembali ke CLI dan masukan perintah berikut :
 
     php spark db:seed UserSeeder
 
@@ -402,6 +402,5 @@ Sesuaikan baris pertama kode di atas menjadi seperti kode baris pertama dibawah 
 Selanjutnya tambahkan method `logout()` pada controller "User" yang berfungsi untuk menghapus session yang sedang berjalan saat user login.
 
 ![enter image description here](https://github.com/antonmartinus72/Lab11Web/raw/main/Screenshot_Pr13/12.png)
-
 
 ## Sekian & Terimakasih
