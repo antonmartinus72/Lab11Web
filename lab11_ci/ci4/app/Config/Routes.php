@@ -39,7 +39,7 @@ $routes->get('/artikel/(:any)', 'Artikel::view/$1');
 $routes->get('/kontak', 'Page::kontak');
 
 
-$routes->group('admin', ['filter' => 'auth'], function ($routes) {
+$routes->group('admin', ['filterS' => 'auth'], function ($routes) {
 	$routes->get('artikel', 'Artikel::admin_index');
 	$routes->add('artikel/add', 'Artikel::add');
 	$routes->add('artikel/edit/(:any)', 'Artikel::edit/$1');
